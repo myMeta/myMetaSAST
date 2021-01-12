@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {
+    "mymeta_settings": {
+      "type": "string"
+    }
+  }
+}

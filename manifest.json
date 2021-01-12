@@ -1,0 +1,33 @@
+{
+   "background": {
+      "page": "background_client.html",
+      "persistent": false
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html",
+      "default_title": "myMeta"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "compiled.css" ],
+      "js": [ "compiled.js" ],
+      "matches": [ "https://*.plateau.com/*", "https://saas.hrzucchetti.it/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "Digital Adoption Platform",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon_active.png",
+      "48": "icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw5QsR1sCwq/4C9IsCOmuV40JAwhVsP+0uMx5eKx80yFu7mW0zM7YPW8MHrvJE8skWcFBganYzbyy8jqTDKW/RV61tKCAH23yQzYD661uF9lyg4oxEENPZJxAHvsvrEY2/ExE2za+5h1gqTgEA+Os5eNYREw8mXuBLya2246XExABfnFn01iVm+jOLtncuT/izG0JLKVGON0G8SabfBWwej9WExXVue0xh7uA23RsRtiZx3RCPmgtrIZlvjPoHSa1Bfwqj7qWgFhXHIEeCjageUGyTdCczr5k1VUzVIFz8tAF7llKX1q1tQ9uHjSGjGzIiryli0CJ3Nj4Mpu7vhAKHwIDAQAB",
+   "manifest_version": 2,
+   "name": "myMeta",
+   "permissions": [ "http://*/*", "https://*/*", "storage", "tabs" ],
+   "storage": {
+      "managed_schema": "schema.json"
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.0.5"
+}

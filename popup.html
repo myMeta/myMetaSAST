@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <title>myMeta settings</title>
+    <style>
+        body {
+          min-width: 250px;
+          font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+          margin: 0px;
+        }
+
+        .blockContainer {
+          padding: 16px 8px;
+          display: table;
+        }
+
+        .blockContainer * {
+          display: table-cell;
+          vertical-align: middle;
+        }
+        
+        .BlockButton {
+          display: flex;
+          width: 100%;
+          height: 40px;
+          background-color: #ffffff;
+          border: none;
+          cursor: pointer;
+          align-items: center;
+          justify-content: flex-start;
+        }
+
+        .BlockButton:hover {
+          background-color: #f6f6f6;
+        }
+        
+    </style>
+    <script src="popup.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons+Outlined|Material+Icons" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+      <div style="display: flex; padding: 8px 16px; justify-content: center; align-items: center;">
+          <div style="flex-grow: 0; text-align: center;">
+              <img src="icon128.png" width="36" height="36" />
+          </div>
+          <span id="ProductName" style="flex-grow: 6; font-weight: bold; font-size: 18px; margin-left: 8px;">myMeta</span>
+        </div>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; padding: 8px 16px;">
+          <span style="flex-grow: 0;">Version:</span>
+          <span id="VersionNumber" style="font-weight: bold; margin-left: 8px;"></span>
+        </div>
+        <div id="EnableMyMeta" style="border-top: 2px solid #eeeeee; display: none;">
+          <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; padding: 8px 16px;">
+            myMeta &#xE9; attivo per questa pagina
+          </div>
+          <button class="BlockButton" id="EnableMyMetaButton">
+            <i class="material-icons" style="margin: 0 8px; color: #4fb8ab">toggle_on</i>Disattiva myMeta
+          </button>
+        </div>
+        <div id="DisableMyMeta" style="border-top: 2px solid #eeeeee; display: none;">
+          <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; padding: 8px 16px;">
+            myMeta non &#xE9; attivo per questa pagina
+          </div>
+          <button class="BlockButton" id="DisableMyMetaButton">
+            <i class="material-icons-outlined" style="margin: 0 8px;">toggle_off</i>Attiva myMeta
+          </button>
+        </div>
+        <div id="ContactUs" style="border-top: 2px solid #eeeeee;">
+          <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; padding: 8px 16px;">
+            Hai problemi nell'utilizzo dell'estensione?
+          </div>
+          <button class="BlockButton" id="ContactUsButton">
+            <i class="material-icons-outlined" style="margin: 0 8px;">contact_support</i>Contattaci
+          </button>
+        </div>
+  </body>
+</html>
